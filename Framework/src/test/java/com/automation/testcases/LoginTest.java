@@ -15,7 +15,7 @@ public class LoginTest extends BaseClass {
 		logger=report.createTest("Login to CRM");
 		LoginPage loginpage=PageFactory.initElements(driver, LoginPage.class);
 		
-		logger.info("Starting application");
+		logger.info("Starting the application");
 		
 		excel.ExcelDataProvider("./TestData/TestData.xlsx");
 		loginpage.loginToApplication(excel.getStringData("Login", 0, 0),excel.getStringData("Login", 0, 1));
