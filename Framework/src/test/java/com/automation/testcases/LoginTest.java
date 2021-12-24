@@ -20,7 +20,7 @@ public class LoginTest extends BaseClass {
 		excel.ExcelDataProvider("./TestData/TestData.xlsx");
 		loginpage.loginToApplication(excel.getStringData("Login", 0, 0),excel.getStringData("Login", 0, 1));
 		
-		logger.pass("Login sucess");
+		logger.pass("Login sucessful");
 		Helper.captureScreenshot(driver);
 	}
 
