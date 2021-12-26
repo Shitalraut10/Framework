@@ -18,7 +18,7 @@ public class LoginTest extends BaseClass {
 		logger.info("Starting the application");
 		
 		excel.ExcelDataProvider("./TestData/TestData.xlsx");
-		loginpage.loginToApplication(excel.getStringData("Login", 0, 0),excel.getStringData("Login", 0, 1));
+		loginpage.loginToApplication(excel.getStringData("Login",0,0),excel.getStringData("Login",0,1));
 		
 		logger.pass("Login sucessfully done");
 		Helper.captureScreenshot(driver);

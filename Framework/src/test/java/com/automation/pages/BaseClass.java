@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.automation.utility.BrowserFactory;
 import com.automation.utility.ConfigDataProvider;
@@ -18,6 +19,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.beust.jcommander.Parameter;
 
 public class BaseClass {
 
@@ -39,9 +41,9 @@ public class BaseClass {
 	}
 	
 	
-	
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void setup()
+	public void setup(String browser,String url)
 	{
 		driver=BrowserFactory.startApplication(driver,config.getBrowser(),config.getStagingURL());
 
