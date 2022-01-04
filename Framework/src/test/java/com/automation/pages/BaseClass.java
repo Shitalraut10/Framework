@@ -41,20 +41,21 @@ public class BaseClass {
 	}
 	
 	
-	@Parameters({"browser","url"})
+	//@Parameters({"browser","url"})
 	@BeforeClass
-	public void setup(String browser,String url)
+	public void setup()//String browser,String url
 	{
 		driver=BrowserFactory.startApplication(driver,config.getBrowser(),config.getStagingURL());
+	//	driver=BrowserFactory.startApplication(driver,browser,url);
 
 	}
 	
 	
-/*	@AfterClass
+	@AfterClass
 	public 	void tearDown()
 	{
 		BrowserFactory.quitBrowser(driver);
-	}*/
+	}
 	
 	@AfterMethod
 	public void tearDownMethod(ITestResult result) throws IOException

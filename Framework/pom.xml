@@ -29,7 +29,8 @@
 			 <version>3.0.0-M3</version>
 			 <configuration>
 			 	<suiteXmlFiles>
-			 		<suiteXmlFile>XMLfiles/${XmlFiles}</suiteXmlFile>
+			 		<suiteXmlFile>XMLfiles/loginTest.xml</suiteXmlFile>
+			 	<!--<suiteXmlFile>XMLfiles/${XmlFiles}</suiteXmlFile> -->
 			 	</suiteXmlFiles>
 			 	
 			 	
